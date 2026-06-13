@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Fundo com a imagem solicitada anteriormente */
             background-image: url('images/uoxrymrrvkm3bpw3.jpg'); 
             background-size: cover;
             background-position: center;
@@ -25,7 +24,7 @@
             color: white;
             position: relative;
             
-            /* 1. ESPAÇO MÍNIMO NAS BORDAS: Apenas um pequeno respiro de 10px */
+            /* ESPAÇAMENTO CONTROLADO: 10px nas laterais para encostar quase totalmente */
             padding: 40px 10px; 
         }
 
@@ -39,20 +38,20 @@
 
         .main-container {
             display: flex;
-            /* 2. LARGURA TOTAL: Para que a coluna esquerda encoste na borda */
-            width: 100%; 
+            width: 100%;
             max-width: 1400px; 
             gap: 20px;
             align-items: flex-start;
+            justify-content: space-between; /* Empurra as colunas para as extremidades */
         }
 
-        /* COLUNA ESQUERDA: Posicionada bem à esquerda */
+        /* COLUNA ESQUERDA: Colada na borda */
         .left-side {
-            flex: 1.5; /* Dá mais espaço para o lado da apresentação */
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Alinha os itens à esquerda */
-            padding-left: 5px;
+            align-items: flex-start;
+            padding: 0;
+            margin: 0;
         }
 
         .profile-link {
@@ -61,28 +60,33 @@
             border-radius: 50%;
             line-height: 0;
             margin-bottom: 20px;
-            margin-left: 40px; /* Mantém a foto um pouco mais centralizada na coluna */
+            /* Pequeno recuo para a foto não ficar "cortada" visualmente na borda */
+            margin-left: 20px; 
         }
 
         .profile-img {
-            width: 220px; 
-            height: 220px; 
+            width: 200px; 
+            height: 200px; 
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #00e5ff;
             box-shadow: 0 0 20px #00e5ff;
         }
 
-        /* 3. CAIXA DE APRESENTAÇÃO COM MAIOR ALTURA E LARGURA */
+        /* CAIXA DE APRESENTAÇÃO: Largura reduzida e colada à esquerda */
         .presentation-box {
             background-color: #ff8c00; 
             color: black;              
-            padding: 60px 40px;      /* Aumentado o preenchimento interno */
-            min-height: 350px;       /* Altura mínima aumentada */
-            width: 95%;              /* Quase encosta na borda da coluna */
-            border-radius: 0 20px 20px 0; /* Arredonda apenas o lado direito para efeito visual */
+            padding: 40px 30px;
+            
+            /* AJUSTES SOLICITADOS */
+            min-height: 350px;       /* Mantida a altura que ficou boa */
+            width: 320px;            /* Largura reduzida significativamente */
+            margin-left: 0;          /* Encosta na borda definida pelo body */
+            
+            border-radius: 0 20px 20px 0; /* Arredondamento apenas no lado direito */
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-align: left;
             display: flex;
             align-items: center;
@@ -95,9 +99,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            /* 4. ABAIXANDO O TEXTO REPOSITORIES: Aumentado de 20px para 120px */
-            padding-top: 120px; 
+            padding-top: 150px; /* Desce a seção Repositories conforme solicitado */
         }
 
         .working-box {
@@ -133,17 +135,17 @@
 <body>
 
     <div class="main-container">
-        <!-- LADO ESQUERDO: APRESENTAÇÃO MJLS -->
+        <!-- LADO ESQUERDO: REDUZIDO E POSICIONADO À BORDA -->
         <div class="left-side">
             <a href="index.html" class="profile-link">
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Nesta seção, apresentamos a estrutura técnica do projeto MJLS. O currículo está dividido de forma modular para facilitar o aprendizado prático das Classes 1 a 5 [1].</p>
+                <p>Nesta seção, exploramos o currículo técnico MJLS. Acesse os módulos das Classes 1 a 5 através do nosso repositório principal [1].</p>
             </div>
         </div>
 
-        <!-- LADO DIREITO: ACESSO AO REPOSITÓRIO -->
+        <!-- LADO DIREITO: REPOSITORIES REPOSICIONADO -->
         <div class="right-side">
             <div class="working-box">
                 Repositories:
