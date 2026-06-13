@@ -7,16 +7,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
     
     <style>
+        /* 1. CONFIGURAÇÃO DO FUNDO COM A IMAGEM DA HOME */
         body {
-            background-color: #000000; 
-            color: white;
-            font-family: 'Montserrat', sans-serif;
+            /* Substitua pelo nome exato do seu arquivo de imagem */
+            background-image: url('images/uoxrymrrvkm3bpw3.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #000000; /* Fallback */
+            
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; 
+            align-items: flex-start; /* Mantém os elementos no topo conforme solicitado */
             min-height: 100vh;
             padding: 40px 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            position: relative;
+            z-index: 0;
+        }
+
+        /* Camada escura para destacar o neon sobre a foto de fundo */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); 
+            z-index: -1;
         }
 
         .main-container {
@@ -25,8 +44,11 @@
             max-width: 1100px;
             gap: 40px;
             align-items: flex-start;
+            position: relative;
+            z-index: 1;
         }
 
+        /* LADO ESQUERDO (Foto-Botão e Apresentação) */
         .left-side {
             flex: 1;
             display: flex;
@@ -34,7 +56,6 @@
             align-items: center;
         }
 
-        /* NOVO ESTILO PARA O LINK DA IMAGEM */
         .profile-link {
             text-decoration: none;
             transition: 0.4s ease;
@@ -44,10 +65,8 @@
             margin-bottom: 30px;
         }
 
-        /* EFEITO AO PASSAR O MOUSE NA IMAGEM-BOTÃO */
         .profile-link:hover {
-            transform: scale(1.05); /* A imagem cresce levemente ao clicar */
-            filter: brightness(1.2); /* Fica um pouco mais clara */
+            transform: scale(1.05);
         }
 
         .profile-img {
@@ -74,6 +93,7 @@
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
+        /* LADO DIREITO (Status e Botão Masters) */
         .right-side {
             flex: 1;
             display: flex;
@@ -115,6 +135,7 @@
         @media (max-width: 800px) {
             .main-container { flex-direction: column; align-items: center; }
             .profile-img { width: 220px; height: 220px; }
+            .right-side { padding-top: 20px; }
         }
     </style>
 </head>
@@ -122,13 +143,13 @@
 
     <div class="main-container">
         <div class="left-side">
-            <!-- A IMAGEM AGORA É UM LINK QUE VOLTA PARA A HOME (index.html) -->
+            <!-- Link de volta para index.html -->
             <a href="index.html" class="profile-link">
                 <img src="images/62560979.png" alt="Voltar para Home" class="profile-img">
             </a>
 
             <div class="presentation-box">
-                <p>Bem-vindo ao projeto MJLS! Explore o conteúdo das aulas Masterclass (Class 1 a 5) clicando no botão ao lado [1].</p>
+                <p>Bem-vindo ao portal da Masterclass MJLS. Aqui apresentamos os fundamentos aplicados nas Classes 1 a 5 do nosso currículo técnico [1].</p>
             </div>
         </div>
 
@@ -136,6 +157,7 @@
             <div class="working-box">
                 no que estou trabalhando:
             </div>
+            <!-- Link para o repositório principal -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
