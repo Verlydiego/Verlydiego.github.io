@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação | MJLS</title>
-    <!-- Importando Montserrat e a nova fonte Orbitron para o título -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -80,9 +79,9 @@
             min-height: 350px;       
             width: 320px;            
             border-radius: 20px; 
-            margin-top: 40px; 
+            margin-top: 40px; /* Início do topo da caixa: ~308px do topo do viewport */
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.1em; /* FONTE BASE */
             text-align: center;
             display: flex;
             align-items: center;
@@ -95,36 +94,40 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 60px; /* Ajustado para acomodar o texto maior */
+            padding-top: 40px; /* Alinhado com o padding do body */
         }
 
-        /* TÍTULO REPOSITORIES COM NOVA FONTE E TAMANHO */
+        /* 1. TÍTULO REPOSITORIES AINDA MAIOR */
         .section-header {
-            font-family: 'Orbitron', sans-serif; /* Fonte solicitada */
+            font-family: 'Orbitron', sans-serif;
             color: black;
-            font-size: 3.8em; /* Tamanho aumentado */
+            font-size: 5.5em; /* Aumentado significativamente */
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            /* Brilho Neon Laranja */
+            letter-spacing: 8px;
             text-shadow: 0 0 15px #ff8c00, 
                          0 0 30px #ff8c00, 
                          0 0 50px #ff8c00;
             
-            /* Ajuste de margem para manter o alinhamento do botão Masters com a Presentation Box */
+            /* Ajuste de margem para alinhar o botão rigorosamente com o topo da presentation-box */
             margin-bottom: 110px; 
             text-align: center;
+            line-height: 1;
         }
 
+        /* 2. BOTÃO MASTERS COM FONTE IGUAL À DA ESQUERDA */
         .masters-button {
             display: inline-block;
-            padding: 20px 60px;
+            padding: 25px 80px;
             background-color: #ff8c00;
             color: black;
             text-decoration: none;
             border-radius: 15px;
             font-weight: 900;
-            font-size: 1.6em;
+            
+            /* TAMANHO IGUAL AO DA CAIXA DE APRESENTAÇÃO */
+            font-size: 1.1em; 
+            
             text-transform: uppercase;
             transition: 0.4s;
             box-shadow: 0 0 15px #00e5ff;
@@ -145,18 +148,17 @@
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Bem-vindo à Masterclass MJLS. Explore o conteúdo técnico e prático desenvolvido através das Classes 1, 2, 3, 4 e 5 acessando o repositório ao lado [1].</p>
+                <p>Nesta seção, exploramos o currículo técnico MJLS. Acesse os módulos das Classes 1 a 5 através do nosso repositório principal.</p>
             </div>
         </div>
 
         <!-- LADO DIREITO -->
         <div class="right-side">
-            <!-- Título "Repositories:" com fonte Orbitron e tamanho ampliado -->
             <div class="section-header">
                 Repositories:
             </div>
             
-            <!-- Botão Masters alinhado com o topo da caixa da esquerda -->
+            <!-- Link para o repositório principal conforme as fontes [1] -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
