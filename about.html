@@ -42,7 +42,6 @@
             justify-content: space-between;
         }
 
-        /* LADO ESQUERDO */
         .left-side {
             display: flex;
             flex-direction: column;
@@ -72,68 +71,77 @@
             object-fit: cover;
         }
 
+        /* ESTILO PLACA DE FERRO PARA A CAIXA DE APRESENTAÇÃO */
         .presentation-box {
-            background-color: #ff8c00; 
-            color: black;              
+            /* Gradiente que simula metal escovado */
+            background: linear-gradient(145deg, #1a1a1a, #333333); 
+            color: #e0e0e0;              
             padding: 40px 30px;
             min-height: 350px;       
             width: 320px;            
-            border-radius: 20px; 
+            border-radius: 15px; 
             margin-top: 40px; 
+            
+            /* Bordas e sombras para efeito de metal */
+            border: 2px solid #444;
+            box-shadow: 
+                inset 2px 2px 5px rgba(255,255,255,0.1), 
+                inset -2px -2px 5px rgba(0,0,0,0.5),
+                0 0 25px #00e5ff; /* Mantém o neon externo */
+
             font-weight: bold;
             font-size: 1.1em; 
             text-align: center;
             display: flex;
             align-items: center;
-            box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* LADO DIREITO: ALINHAMENTO RECALIBRADO */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            /* ALINHAMENTO: Coloca o texto no centro da altura da imagem */
             padding-top: 68px; 
         }
 
         .section-header {
             font-family: 'Orbitron', sans-serif;
-            color: black;
-            
-            /* TAMANHO REDUZIDO CONFORME SOLICITADO */
+            color: #00e5ff; /* Texto agora em Neon para destacar sobre o fundo escuro */
             font-size: 4.5em; 
-            
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 8px;
-            text-shadow: 0 0 15px #ff8c00, 0 0 30px #ff8c00, 0 0 50px #ff8c00;
+            text-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff;
             text-align: center;
             line-height: 1;
-            
-            /* MARGEM AJUSTADA PARA ALINHAR O TOPO DO BOTÃO COM O TOPO DA CAIXA ESQUERDA */
             margin-bottom: 128px; 
         }
 
+        /* ESTILO PLACA DE FERRO PARA O BOTÃO MASTERS */
         .masters-button {
             display: inline-block;
             padding: 25px 80px;
-            background-color: #ff8c00;
-            color: black;
+            /* Gradiente metálico */
+            background: linear-gradient(145deg, #222, #444);
+            color: #00e5ff; /* Texto neon para combinar */
             text-decoration: none;
-            border-radius: 15px;
+            border-radius: 10px;
             font-weight: 900;
-            font-size: 1.1em; /* Mantido igual à caixa da esquerda */
+            font-size: 1.1em;
             text-transform: uppercase;
             transition: 0.4s;
-            box-shadow: 0 0 15px #00e5ff;
+            
+            border: 2px solid #555;
+            box-shadow: 
+                inset 1px 1px 3px rgba(255,255,255,0.2), 
+                0 0 15px #00e5ff;
         }
 
         .masters-button:hover {
             transform: scale(1.1);
+            background: linear-gradient(145deg, #333, #555);
             box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
+            color: #fff;
         }
     </style>
 </head>
@@ -145,7 +153,7 @@
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Nesta seção, exploramos o currículo técnico MJLS. Acesse os módulos das Classes 1 a 5 através do nosso repositório principal.</p>
+                <p>Portal Técnico MJLS: Estrutura modular focada no desenvolvimento prático das Classes 1 a 5.</p>
             </div>
         </div>
 
@@ -154,7 +162,7 @@
                 Repositories:
             </div>
             
-            <!-- BotãoMasters: Alinhamento horizontal recalibrado -->
+            <!-- Link para o repositório principal [1] -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
