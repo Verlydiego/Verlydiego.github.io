@@ -271,6 +271,14 @@
                 0 0 60px #00e5ff;
         }
 
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+
+            overflow: visible;
+            gap: 2px;  espaçamento entre botões 
+        }
+
     </style>
 </head>
 <body>
@@ -308,10 +316,11 @@
                 Repositories
             </div>
             
-            <!-- Link para o repositório principal [1] -->
-            <a href="https://verlydiego.github.io/Masters/" class="masters-button">
-                Masters
-            </a>
+            <div class="buttons-container">
+                <a href="https://verlydiego.github.io/Masters/" class="masters-button">
+                    Masters
+                </a>
+            </div>
         </div>
     </div>
 
