@@ -14,91 +14,86 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            
-            /* ALTERAÇÃO: Alinha o conteúdo ao topo em vez de centralizar verticalmente */
             align-items: flex-start; 
-            
             min-height: 100vh;
-            
-            /* Ajuste este valor para definir a distância exata do topo da tela */
-            padding: 40px 20px; 
+            padding: 40px 20px;
         }
 
         .main-container {
             display: flex;
             width: 100%;
-            max-width: 1200px;
-            gap: 60px;
+            max-width: 1100px; /* Reduzi um pouco a largura máxima do container */
+            gap: 40px;
             align-items: flex-start;
         }
 
         /* COLUNA ESQUERDA (Imagem + Apresentação) */
         .left-side {
-            flex: 1.2;
+            flex: 1; /* Voltei para proporção igual à direita para reduzir o tamanho */
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Removemos margens extras para subir a imagem */
-            margin-top: 0; 
         }
 
         .profile-img {
-            width: 220px;
-            height: 220px;
+            width: 180px; /* Reduzi levemente a imagem para acompanhar a caixa menor */
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #00e5ff;
             box-shadow: 0 0 20px #00e5ff;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
+        /* CAIXA DE APRESENTAÇÃO REDUZIDA */
         .presentation-box {
             background-color: #ff8c00; 
             color: black;              
-            padding: 60px 40px;        
-            min-height: 400px;         
+            
+            /* REDUÇÃO: Diminuímos o padding e a altura mínima */
+            padding: 40px 30px;        
+            min-height: 250px;         
+            
             display: flex;
             align-items: center;       
             justify-content: center;
             border-radius: 20px;
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1.1em; /* Fonte levemente menor para caber melhor na caixa reduzida */
             text-align: center;
-            box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
+            box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* COLUNA DIREITA (Trabalho Atual + Botão Masters) */
+        /* COLUNA DIREITA */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            /* ALTERAÇÃO: Reduzi de 150px para 50px para subir a caixa laranja */
-            padding-top: 50px; 
+            padding-top: 40px; 
         }
 
         .working-box {
             background-color: #ff8c00; 
             color: black;              
-            padding: 15px 30px;
+            padding: 12px 25px;
             border-radius: 10px;
-            font-size: 1em;
+            font-size: 0.9em;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 25px;
-            box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff; 
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px #00e5ff; 
         }
 
         .masters-button {
             display: inline-block;
-            padding: 20px 50px;
+            padding: 15px 40px;
             background-color: #ff8c00;
             color: black;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 900;
-            font-size: 1.6em;
+            font-size: 1.4em;
             transition: 0.4s;
             box-shadow: 0 0 15px #00e5ff;
         }
@@ -108,7 +103,7 @@
             box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 800px) {
             .main-container { flex-direction: column; align-items: center; }
             .right-side { padding-top: 20px; }
         }
@@ -121,7 +116,7 @@
         <div class="left-side">
             <img src="images/62560979.png" alt="Perfil" class="profile-img">
             <div class="presentation-box">
-                <p>Olá! Este espaço é dedicado à apresentação do projeto MJLS Masterclass, focado no desenvolvimento das Classes 1 a 5 [1].</p>
+                <p>Bem-vindo ao projeto MJLS! Aqui você encontrará o acesso direto às aulas da Masterclass, focadas no desenvolvimento técnico dos módulos 1 a 5 [1].</p>
             </div>
         </div>
 
@@ -130,7 +125,6 @@
             <div class="working-box">
                 no que estou trabalhando:
             </div>
-            <!-- Link para o repositório principal com a lista de aulas [1] -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
