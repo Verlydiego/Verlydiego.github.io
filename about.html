@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação | MJLS</title>
+    <title>Apresentação</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
     
     <style>
-        /* 1. CONFIGURAÇÃO DO FUNDO COM A IMAGEM DA HOME */
+        /* 1. AJUSTE PARA TELA ÚNICA (SEM ROLAGEM) */
         body {
-            /* Substitua pelo nome exato do seu arquivo de imagem */
-            background-image: url('images/uoxrymrrvkm3bpw3.jpg'); 
+            background-image: url('images/background.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-color: #000000; /* Fallback */
+            background-color: #000000;
             
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Mantém os elementos no topo conforme solicitado */
-            min-height: 100vh;
-            padding: 40px 20px;
+            align-items: center; /* Centraliza verticalmente para ocupar a tela padrão */
+            height: 100vh;       /* Fixa a altura na altura da tela do usuário */
+            overflow: hidden;    /* Remove a barra de rolagem */
+            
             font-family: 'Montserrat', sans-serif;
             color: white;
             position: relative;
-            z-index: 0;
         }
 
-        /* Camada escura para destacar o neon sobre a foto de fundo */
         body::before {
             content: "";
             position: absolute;
@@ -40,15 +38,13 @@
 
         .main-container {
             display: flex;
-            width: 100%;
-            max-width: 1100px;
-            gap: 40px;
-            align-items: flex-start;
-            position: relative;
-            z-index: 1;
+            width: 90%;
+            max-width: 1000px;
+            gap: 30px;
+            align-items: center; /* Alinha os dois lados pelo centro */
         }
 
-        /* LADO ESQUERDO (Foto-Botão e Apresentação) */
+        /* LADO ESQUERDO */
         .left-side {
             flex: 1;
             display: flex;
@@ -61,53 +57,44 @@
             transition: 0.4s ease;
             border-radius: 50%;
             line-height: 0;
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-
-        .profile-link:hover {
-            transform: scale(1.05);
+            margin-bottom: 20px;
         }
 
         .profile-img {
-            width: 280px; 
-            height: 280px; 
+            width: 220px; /* Tamanho levemente reduzido para caber na tela padrão */
+            height: 220px; 
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #00e5ff;
-            box-shadow: 0 0 25px #00e5ff;
+            box-shadow: 0 0 20px #00e5ff;
         }
 
         .presentation-box {
             background-color: #ff8c00; 
             color: black;              
-            padding: 40px 30px;        
-            min-height: 250px;         
-            display: flex;
-            align-items: center;       
-            justify-content: center;
+            padding: 30px;         /* Espaçamento reduzido */
+            width: 100%;           /* Ocupa a largura da coluna */
             border-radius: 20px;
             font-weight: bold;
             font-size: 1.1em;
             text-align: center;
-            box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
+            box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff;
         }
 
-        /* LADO DIREITO (Status e Botão Masters) */
+        /* LADO DIREITO */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 60px; 
         }
 
         .working-box {
             background-color: #ff8c00; 
             color: black;              
-            padding: 12px 25px;
-            border-radius: 10px;
-            font-size: 0.9em;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1em;
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 20px;
@@ -129,13 +116,12 @@
 
         .masters-button:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
         }
 
-        @media (max-width: 800px) {
-            .main-container { flex-direction: column; align-items: center; }
-            .profile-img { width: 220px; height: 220px; }
-            .right-side { padding-top: 20px; }
+        /* Responsividade para telas menores */
+        @media (max-height: 700px) {
+            .profile-img { width: 150px; height: 150px; }
+            .presentation-box { font-size: 0.9em; padding: 20px; }
         }
     </style>
 </head>
@@ -143,21 +129,18 @@
 
     <div class="main-container">
         <div class="left-side">
-            <!-- Link de volta para index.html -->
             <a href="index.html" class="profile-link">
-                <img src="images/62560979.png" alt="Voltar para Home" class="profile-img">
+                <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
-
             <div class="presentation-box">
-                <p>Bem-vindo ao portal da Masterclass MJLS. Aqui apresentamos os fundamentos aplicados nas Classes 1 a 5 do nosso currículo técnico [1].</p>
+                <p>Explore o currículo técnico da Masterclass MJLS. Aqui você acessa os fundamentos das Classes 1 a 5 [1].</p>
             </div>
         </div>
 
         <div class="right-side">
             <div class="working-box">
-                no que estou trabalhando:
+                Repositories:
             </div>
-            <!-- Link para o repositório principal -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
