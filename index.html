@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verly Diego | Home</title>
+    <!-- Importando a fonte moderna Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. CONFIGURAÇÃO DO FUNDO PRETO E CENTRALIZAÇÃO */
+        body {
+            background-color: #000000; /* Fundo preto absoluto */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Centraliza verticalmente na tela toda */
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 2. ESTILO DO BOTÃO CIRCULAR COM NEON AZUL */
+        .neon-profile-button {
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 50%; /* Garante que a área do link seja redonda */
+            transition: 0.5s ease;
+            line-height: 0;
+            
+            /* EFEITO NEON AZUL CLARO BORRADO */
+            box-shadow: 0 0 20px #00e5ff, 
+                        0 0 40px #00e5ff, 
+                        0 0 60px #00e5ff;
+            
+            border: 4px solid #00e5ff; /* Borda para definir o círculo */
+        }
+
+        /* 3. EFEITO AO PASSAR O MOUSE (HOVER) */
+        .neon-profile-button:hover {
+            transform: scale(1.1); /* Aumenta levemente */
+            box-shadow: 0 0 30px #00e5ff, 
+                        0 0 80px #00e5ff, 
+                        0 0 120px #00e5ff; /* Intensifica o brilho neon */
+        }
+
+        /* 4. TORNANDO A IMAGEM REDONDA */
+        .neon-profile-button img {
+            width: 350px;  /* Tamanho da imagem (ajuste se necessário) */
+            height: 350px; /* Deve ser igual à largura para ser um círculo perfeito */
+            border-radius: 50%; /* Torna a imagem redonda */
+            object-fit: cover;  /* Garante que a foto não fique esticada */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- A IMAGEM-BOTÃO -->
+    <!-- Substitua 'URL_DA_SUA_FOTO' pelo link da sua imagem -->
+    <!-- O link 'href' leva para a sua página de aulas MJLS [1] -->
+    <a href="https://verlydiego.github.io/Masters/" class="neon-profile-button">
+        <img src="URL_DA_SUA_FOTO" alt="Verly Diego - Clique para acessar">
+    </a>
+
+</body>
+</html>
