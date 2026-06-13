@@ -22,7 +22,7 @@
             font-family: 'Montserrat', sans-serif;
             color: white;
             position: relative;
-            padding: 40px 10px; /* Base para todos os cálculos (40px) */
+            padding: 40px 10px; 
         }
 
         body::before {
@@ -42,7 +42,7 @@
             justify-content: space-between;
         }
 
-        /* COLUNA ESQUERDA */
+        /* LADO ESQUERDO */
         .left-side {
             display: flex;
             flex-direction: column;
@@ -79,7 +79,7 @@
             min-height: 350px;       
             width: 320px;            
             border-radius: 20px; 
-            margin-top: 40px; /* Começa exatamente aos 308px do topo da página */
+            margin-top: 40px; 
             font-weight: bold;
             font-size: 1.1em; 
             text-align: center;
@@ -88,21 +88,24 @@
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* COLUNA DIREITA: AJUSTES DE ALINHAMENTO */
+        /* LADO DIREITO: ALINHAMENTO RECALIBRADO */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             
-            /* ALINHAMENTO DE "REPOSITORIES" COM O CENTRO DA IMAGEM */
-            padding-top: 60px; 
+            /* ALINHAMENTO: Coloca o texto no centro da altura da imagem */
+            padding-top: 68px; 
         }
 
         .section-header {
             font-family: 'Orbitron', sans-serif;
             color: black;
-            font-size: 6em; /* Aumentada ainda mais conforme solicitado */
+            
+            /* TAMANHO REDUZIDO CONFORME SOLICITADO */
+            font-size: 4.5em; 
+            
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 8px;
@@ -110,8 +113,8 @@
             text-align: center;
             line-height: 1;
             
-            /* MARGEM PARA ALINHAR O TOPO DO BOTÃO COM O TOPO DA CAIXA ESQUERDA (308px) */
-            margin-bottom: 120px; 
+            /* MARGEM AJUSTADA PARA ALINHAR O TOPO DO BOTÃO COM O TOPO DA CAIXA ESQUERDA */
+            margin-bottom: 128px; 
         }
 
         .masters-button {
@@ -122,10 +125,7 @@
             text-decoration: none;
             border-radius: 15px;
             font-weight: 900;
-            
-            /* TAMANHO IGUAL AO DA CAIXA DE APRESENTAÇÃO */
-            font-size: 1.1em; 
-            
+            font-size: 1.1em; /* Mantido igual à caixa da esquerda */
             text-transform: uppercase;
             transition: 0.4s;
             box-shadow: 0 0 15px #00e5ff;
@@ -140,23 +140,21 @@
 <body>
 
     <div class="main-container">
-        <!-- LADO ESQUERDO -->
         <div class="left-side">
             <a href="index.html" class="profile-link">
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Explore a progressão técnica do projeto MJLS. Este portal oferece acesso direto aos módulos práticos das Classes 1 a 5.</p>
+                <p>Nesta seção, exploramos o currículo técnico MJLS. Acesse os módulos das Classes 1 a 5 através do nosso repositório principal.</p>
             </div>
         </div>
 
-        <!-- LADO DIREITO -->
         <div class="right-side">
             <div class="section-header">
                 Repositories:
             </div>
             
-            <!-- BotãoMasters: Alinhado horizontalmente com o início da Presentation Box -->
+            <!-- BotãoMasters: Alinhamento horizontal recalibrado -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
