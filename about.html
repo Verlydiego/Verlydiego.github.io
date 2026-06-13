@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação</title>
+    <title>Apresentação | MJLS</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
-    
     <style>
-        /* 1. AJUSTE PARA TELA ÚNICA (SEM ROLAGEM) */
         body {
-            background-image: url('images/background.jpg'); 
+            /* ATUALIZADO: Novo nome da imagem de fundo */
+            background-image: url('images/uoxrymrrvkm3bpw3.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-color: #000000;
-            
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center; /* Centraliza verticalmente para ocupar a tela padrão */
-            height: 100vh;       /* Fixa a altura na altura da tela do usuário */
-            overflow: hidden;    /* Remove a barra de rolagem */
-            
+            align-items: flex-start; /* Alinhado ao topo */
+            height: 100vh;
+            overflow: hidden;
             font-family: 'Montserrat', sans-serif;
             color: white;
             position: relative;
+            padding-top: 60px; /* Distância do topo */
         }
 
         body::before {
             content: "";
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); 
+            background: rgba(0, 0, 0, 0.6);
             z-index: -1;
         }
 
@@ -40,11 +38,10 @@
             display: flex;
             width: 90%;
             max-width: 1000px;
-            gap: 30px;
-            align-items: center; /* Alinha os dois lados pelo centro */
+            gap: 40px;
+            align-items: flex-start;
         }
 
-        /* LADO ESQUERDO */
         .left-side {
             flex: 1;
             display: flex;
@@ -56,13 +53,14 @@
             text-decoration: none;
             transition: 0.4s ease;
             border-radius: 50%;
-            line-height: 0;
             margin-bottom: 20px;
         }
 
+        .profile-link:hover { transform: scale(1.05); }
+
         .profile-img {
-            width: 220px; /* Tamanho levemente reduzido para caber na tela padrão */
-            height: 220px; 
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #00e5ff;
@@ -70,10 +68,9 @@
         }
 
         .presentation-box {
-            background-color: #ff8c00; 
-            color: black;              
-            padding: 30px;         /* Espaçamento reduzido */
-            width: 100%;           /* Ocupa a largura da coluna */
+            background-color: #ff8c00;
+            color: black;
+            padding: 30px;
             border-radius: 20px;
             font-weight: bold;
             font-size: 1.1em;
@@ -81,71 +78,56 @@
             box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff;
         }
 
-        /* LADO DIREITO */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 20px;
         }
 
         .working-box {
-            background-color: #ff8c00; 
-            color: black;              
-            padding: 10px 20px;
+            background-color: #ff8c00;
+            color: black;
+            padding: 10px 30px;
             border-radius: 8px;
-            font-size: 1em;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px #00e5ff; 
+            /* Espaçamento maior solicitado */
+            margin-bottom: 100px; 
+            box-shadow: 0 0 15px #00e5ff;
         }
 
         .masters-button {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 20px 50px;
             background-color: #ff8c00;
             color: black;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 900;
-            font-size: 1.4em;
+            font-size: 1.5em;
             transition: 0.4s;
             box-shadow: 0 0 15px #00e5ff;
         }
 
-        .masters-button:hover {
-            transform: scale(1.1);
-        }
-
-        /* Responsividade para telas menores */
-        @media (max-height: 700px) {
-            .profile-img { width: 150px; height: 150px; }
-            .presentation-box { font-size: 0.9em; padding: 20px; }
-        }
+        .masters-button:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
-
     <div class="main-container">
         <div class="left-side">
             <a href="index.html" class="profile-link">
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Explore o currículo técnico da Masterclass MJLS. Aqui você acessa os fundamentos das Classes 1 a 5 [1].</p>
+                <p>Bem-vindo ao projeto MJLS! Aqui você acessa o currículo completo das aulas Class 1 a 5.</p>
             </div>
         </div>
-
         <div class="right-side">
-            <div class="working-box">
-                Repositories:
-            </div>
-            <a href="https://verlydiego.github.io/Masters/" class="masters-button">
-                Masters
-            </a>
+            <div class="working-box">Repositories:</div>
+            <a href="https://verlydiego.github.io/Masters/" class="masters-button">Masters</a>
         </div>
     </div>
-
 </body>
 </html>
