@@ -22,55 +22,64 @@
         .main-container {
             display: flex;
             width: 100%;
-            max-width: 1100px; /* Reduzi um pouco a largura máxima do container */
+            max-width: 1100px;
             gap: 40px;
             align-items: flex-start;
         }
 
-        /* COLUNA ESQUERDA (Imagem + Apresentação) */
         .left-side {
-            flex: 1; /* Voltei para proporção igual à direita para reduzir o tamanho */
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
+        /* NOVO ESTILO PARA O LINK DA IMAGEM */
+        .profile-link {
+            text-decoration: none;
+            transition: 0.4s ease;
+            border-radius: 50%;
+            line-height: 0;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        /* EFEITO AO PASSAR O MOUSE NA IMAGEM-BOTÃO */
+        .profile-link:hover {
+            transform: scale(1.05); /* A imagem cresce levemente ao clicar */
+            filter: brightness(1.2); /* Fica um pouco mais clara */
+        }
+
         .profile-img {
-            width: 180px; /* Reduzi levemente a imagem para acompanhar a caixa menor */
-            height: 180px;
+            width: 280px; 
+            height: 280px; 
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #00e5ff;
-            box-shadow: 0 0 20px #00e5ff;
-            margin-bottom: 20px;
+            box-shadow: 0 0 25px #00e5ff;
         }
 
-        /* CAIXA DE APRESENTAÇÃO REDUZIDA */
         .presentation-box {
             background-color: #ff8c00; 
             color: black;              
-            
-            /* REDUÇÃO: Diminuímos o padding e a altura mínima */
             padding: 40px 30px;        
             min-height: 250px;         
-            
             display: flex;
             align-items: center;       
             justify-content: center;
             border-radius: 20px;
             font-weight: bold;
-            font-size: 1.1em; /* Fonte levemente menor para caber melhor na caixa reduzida */
+            font-size: 1.1em;
             text-align: center;
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* COLUNA DIREITA */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 40px; 
+            padding-top: 60px; 
         }
 
         .working-box {
@@ -105,22 +114,24 @@
 
         @media (max-width: 800px) {
             .main-container { flex-direction: column; align-items: center; }
-            .right-side { padding-top: 20px; }
+            .profile-img { width: 220px; height: 220px; }
         }
     </style>
 </head>
 <body>
 
     <div class="main-container">
-        <!-- LADO ESQUERDO -->
         <div class="left-side">
-            <img src="images/62560979.png" alt="Perfil" class="profile-img">
+            <!-- A IMAGEM AGORA É UM LINK QUE VOLTA PARA A HOME (index.html) -->
+            <a href="index.html" class="profile-link">
+                <img src="images/62560979.png" alt="Voltar para Home" class="profile-img">
+            </a>
+
             <div class="presentation-box">
-                <p>Bem-vindo ao projeto MJLS! Aqui você encontrará o acesso direto às aulas da Masterclass, focadas no desenvolvimento técnico dos módulos 1 a 5 [1].</p>
+                <p>Bem-vindo ao projeto MJLS! Explore o conteúdo das aulas Masterclass (Class 1 a 5) clicando no botão ao lado [1].</p>
             </div>
         </div>
 
-        <!-- LADO DIREITO -->
         <div class="right-side">
             <div class="working-box">
                 no que estou trabalhando:
