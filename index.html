@@ -8,56 +8,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     
     <style>
-        /* 1. CONFIGURAÇÃO DO FUNDO PRETO E CENTRALIZAÇÃO */
+        /* 1. CONFIGURAÇÃO DO FUNDO COM IMAGEM E CENTRALIZAÇÃO */
         body {
-            background-color: #000000; /* Fundo preto absoluto */
+            /* SUBSTITUA 'images/background.jpg' PELO NOME DO ARQUIVO DE FUNDO QUE VOCÊ ENVIOU */
+            background-image: url('images/uoxrymrrvkm3bpw3.jpg'); 
+            background-size: cover;        /* Faz a imagem cobrir toda a tela */
+            background-position: center;   /* Centraliza a imagem de fundo */
+            background-repeat: no-repeat;  /* Evita que a imagem se repita */
+            background-attachment: fixed;  /* Mantém o fundo fixo ao rolar (opcional) */
+            background-color: #000000;     /* Fallback: cor preta caso a imagem falhe */
+            
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Centraliza verticalmente na tela toda */
+            height: 100vh; 
             overflow: hidden;
             font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Adicionando uma camada escura sobre a imagem para destacar o Neon (Opcional) */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Escurece a imagem em 50% */
+            z-index: -1;
         }
 
         /* 2. ESTILO DO BOTÃO CIRCULAR COM NEON AZUL */
         .neon-profile-button {
             display: inline-block;
             text-decoration: none;
-            border-radius: 50%; /* Garante que a área do link seja redonda */
+            border-radius: 50%; 
             transition: 0.5s ease;
             line-height: 0;
+            position: relative;
+            z-index: 1;
             
             /* EFEITO NEON AZUL CLARO BORRADO */
             box-shadow: 0 0 20px #00e5ff, 
                         0 0 40px #00e5ff, 
                         0 0 60px #00e5ff;
             
-            border: 4px solid #00e5ff; /* Borda para definir o círculo */
+            border: 4px solid #00e5ff; 
         }
 
         /* 3. EFEITO AO PASSAR O MOUSE (HOVER) */
         .neon-profile-button:hover {
-            transform: scale(1.1); /* Aumenta levemente */
+            transform: scale(1.1); 
             box-shadow: 0 0 30px #00e5ff, 
                         0 0 80px #00e5ff, 
-                        0 0 120px #00e5ff; /* Intensifica o brilho neon */
+                        0 0 120px #00e5ff; 
         }
 
         /* 4. TORNANDO A IMAGEM REDONDA */
         .neon-profile-button img {
-            width: 350px;  /* Tamanho da imagem (ajuste se necessário) */
-            height: 350px; /* Deve ser igual à largura para ser um círculo perfeito */
-            border-radius: 50%; /* Torna a imagem redonda */
-            object-fit: cover;  /* Garante que a foto não fique esticada */
+            width: 350px;  
+            height: 350px; 
+            border-radius: 50%; 
+            object-fit: cover;  
         }
     </style>
 </head>
 <body>
 
-    <!-- A IMAGEM-BOTÃO -->
-    <!-- Substitua 'URL_DA_SUA_FOTO' pelo link da sua imagem -->
-    <!-- O link 'href' leva para a sua página de aulas MJLS [1] -->
+    <!-- A IMAGEM-BOTÃO QUE LEVA AO ABOUT.HTML -->
     <a href="https://verlydiego.github.io/about.html" class="neon-profile-button">
         <img src="images/62560979.png" alt="Verly Diego - Clique para acessar">
     </a>
