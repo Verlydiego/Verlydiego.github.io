@@ -23,14 +23,14 @@
             justify-content: center;
             align-items: center;
             height: 100vh; 
-            overflow: hidden;
+            overflow-x: hidden;
             font-family: 'Montserrat', sans-serif;
         }
 
         /* Adicionando uma camada escura sobre a imagem para destacar o Neon (Opcional) */
         body::before {
             content: "";
-            position: absolute;
+            position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.5); /* Escurece a imagem em 50% */
             z-index: -1;
@@ -53,7 +53,7 @@
                         0 0 40px #00e5ff, 
                         0 0 60px #00e5ff;
             
-            border: 4px solid #00e5ff; 
+            border: clamp(2px, 0.4vw, 4px) solid #00e5ff;
         }
 
         /* 3. EFEITO AO PASSAR O MOUSE (HOVER) */
@@ -68,10 +68,11 @@
 
         /* 4. TORNANDO A IMAGEM REDONDA */
         .neon-profile-button img {
-            width: 350px;  
-            height: 350px; 
-            border-radius: 50%; 
-            object-fit: cover;  
+            width: clamp(180px, 30vw, 350px);
+            height: clamp(180px, 30vw, 350px);
+
+            border-radius: 50%;
+            object-fit: cover;
         }
     </style>
 </head>
