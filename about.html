@@ -7,91 +7,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
     
     <style>
-        /* 1. CONFIGURAÇÃO GERAL */
         body {
-            background-color: #000000; /* Fundo preto */
+            background-color: #000000; 
             color: white;
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            
+            /* ALTERAÇÃO: Alinha o conteúdo ao topo em vez de centralizar verticalmente */
+            align-items: flex-start; 
+            
             min-height: 100vh;
-            padding: 20px;
+            
+            /* Ajuste este valor para definir a distância exata do topo da tela */
+            padding: 40px 20px; 
         }
 
-        /* CONTAINER PRINCIPAL DIVIDIDO EM DOIS LADOS */
         .main-container {
             display: flex;
             width: 100%;
             max-width: 1200px;
-            gap: 50px;
+            gap: 60px;
             align-items: flex-start;
         }
 
-        /* 2. LADO ESQUERDO (Imagem + Caixa de Apresentação) */
+        /* COLUNA ESQUERDA (Imagem + Apresentação) */
         .left-side {
-            flex: 1;
+            flex: 1.2;
             display: flex;
             flex-direction: column;
             align-items: center;
+            /* Removemos margens extras para subir a imagem */
+            margin-top: 0; 
         }
 
         .profile-img {
-            width: 250px;
-            height: 250px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #00e5ff; /* Borda Azul Neon */
+            border: 4px solid #00e5ff;
             box-shadow: 0 0 20px #00e5ff;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .presentation-box {
-            background-color: #ff8c00; /* Laranja */
-            color: black;              /* Letras Pretas */
-            padding: 30px;
-            border-radius: 15px;
+            background-color: #ff8c00; 
+            color: black;              
+            padding: 60px 40px;        
+            min-height: 400px;         
+            display: flex;
+            align-items: center;       
+            justify-content: center;
+            border-radius: 20px;
             font-weight: bold;
+            font-size: 1.3em;
             text-align: center;
-            /* Efeito Neon Azul Borrado no fundo da caixa */
-            box-shadow: 0 0 25px #00e5ff, 
-                        0 0 50px #00e5ff;
+            box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
         }
 
-        /* 3. LADO DIREITO (Trabalho Atual + Botão Masters) */
+        /* COLUNA DIREITA (Trabalho Atual + Botão Masters) */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100%;
-            padding-top: 100px; /* Alinha mais ao centro vertical */
+            
+            /* ALTERAÇÃO: Reduzi de 150px para 50px para subir a caixa laranja */
+            padding-top: 50px; 
         }
 
         .working-box {
-            background-color: #333;
-            color: #00e5ff;
+            background-color: #ff8c00; 
+            color: black;              
             padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 1.1em;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 900;
             text-transform: uppercase;
-            border: 1px solid #00e5ff;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px #00e5ff;
+            margin-bottom: 25px;
+            box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff; 
         }
 
-        /* Botão para o repositório Masters */
         .masters-button {
             display: inline-block;
-            padding: 20px 40px;
-            background-color: #ff8c00; /* Laranja */
+            padding: 20px 50px;
+            background-color: #ff8c00;
             color: black;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 900;
-            font-size: 1.5em;
+            font-size: 1.6em;
             transition: 0.4s;
             box-shadow: 0 0 15px #00e5ff;
         }
@@ -101,8 +108,7 @@
             box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
         }
 
-        /* Responsividade para Celulares */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .main-container { flex-direction: column; align-items: center; }
             .right-side { padding-top: 20px; }
         }
@@ -111,20 +117,20 @@
 <body>
 
     <div class="main-container">
-        <!-- COLUNA ESQUERDA -->
+        <!-- LADO ESQUERDO -->
         <div class="left-side">
             <img src="images/62560979.png" alt="Perfil" class="profile-img">
             <div class="presentation-box">
-                <p>Olá! Eu sou o Verly Diego. Esta é a minha Masterclass MJLS, onde compartilho conhecimento técnico e prático através de módulos estruturados.</p>
+                <p>Olá! Este espaço é dedicado à apresentação do projeto MJLS Masterclass, focado no desenvolvimento das Classes 1 a 5 [1].</p>
             </div>
         </div>
 
-        <!-- COLUNA DIREITA -->
+        <!-- LADO DIREITO -->
         <div class="right-side">
             <div class="working-box">
                 no que estou trabalhando:
             </div>
-            <!-- Link para o repositório citado na fonte [1] -->
+            <!-- Link para o repositório principal com a lista de aulas [1] -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
