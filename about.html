@@ -42,21 +42,32 @@
             justify-content: space-between;
         }
 
-        /* COLUNA ESQUERDA: Agora com alinhamento centralizado para a imagem e caixa */
         .left-side {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Garante a imagem no centro da largura da caixa */
+            align-items: center; 
             padding: 0;
             margin: 0;
         }
 
+        /* 1. ESTILO DO BOTÃO NA IMAGEM (RESTAURADO E AMPLIADO) */
         .profile-link {
             text-decoration: none;
-            transition: 0.4s ease;
+            transition: 0.5s ease; /* Transição suave para o brilho e escala */
             border-radius: 50%;
             line-height: 0;
+            display: inline-block;
             margin-bottom: 20px;
+            border: 4px solid #00e5ff;
+            box-shadow: 0 0 20px #00e5ff;
+        }
+
+        /* EFEITO HOVER: CRESCE E BRILHA MAIS */
+        .profile-link:hover {
+            transform: scale(1.1); /* Cresce levemente */
+            box-shadow: 0 0 30px #00e5ff, 
+                        0 0 60px #00e5ff, 
+                        0 0 90px #00e5ff; /* Intensifica o brilho azul */
         }
 
         .profile-img {
@@ -64,37 +75,34 @@
             height: 200px; 
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #00e5ff;
-            box-shadow: 0 0 20px #00e5ff;
         }
 
-        /* CAIXA DE APRESENTAÇÃO: Bordas arredondadas e largura ajustada */
+        /* 2. CAIXA DE APRESENTAÇÃO (MAIS BAIXA E COM BORDAS SUAVES) */
         .presentation-box {
             background-color: #ff8c00; 
             color: black;              
             padding: 40px 30px;
             min-height: 350px;       
             width: 320px;            
-            
-            /* Bordas arredondadas em todos os lados para não ficar quadrada à esquerda */
             border-radius: 20px; 
+            
+            /* AJUSTE: Desce a caixa em relação à imagem */
+            margin-top: 40px; 
             
             font-weight: bold;
             font-size: 1.1em;
-            text-align: center; /* Texto centralizado para harmonizar com o layout */
+            text-align: center;
             display: flex;
             align-items: center;
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* COLUNA DIREITA */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            /* ALINHAMENTO: "Repositories" na linha do centro da imagem (200px imagem / 2 = 100px) */
+            /* Alinhado ao centro da imagem (80px de padding + 100px de metade da imagem) */
             padding-top: 80px; 
         }
 
@@ -106,10 +114,7 @@
             font-size: 1.1em;
             font-weight: 900;
             text-transform: uppercase;
-            
-            /* Espaçamento para o botão Masters abaixo */
             margin-bottom: 120px; 
-            
             box-shadow: 0 0 15px #00e5ff; 
         }
 
@@ -134,17 +139,17 @@
 <body>
 
     <div class="main-container">
-        <!-- LADO ESQUERDO: IMAGEM NO CENTRO DA CAIXA -->
+        <!-- COLUNA ESQUERDA -->
         <div class="left-side">
             <a href="index.html" class="profile-link">
-                <img src="images/62560979.png" alt="Home" class="profile-img">
+                <img src="images/62560979.png" alt="Voltar para Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Nesta seção, exploramos o currículo técnico MJLS. Acesse os módulos das Classes 1 a 5 através do nosso repositório principal [1].</p>
+                <p>O projeto MJLS foi estruturado para guiar seu aprendizado de forma progressiva. Explore o conteúdo detalhado das aulas Class 1 até a Class 5 através do link Masters.</p>
             </div>
         </div>
 
-        <!-- LADO DIREITO: REPOSITORIES ALINHADO AO CENTRO DA IMAGEM -->
+        <!-- COLUNA DIREITA -->
         <div class="right-side">
             <div class="working-box">
                 Repositories:
