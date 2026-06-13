@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apresentação | MJLS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <!-- Importando Montserrat e a nova fonte Orbitron para o título -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <style>
         body {
             background-image: url('images/uoxrymrrvkm3bpw3.jpg'); 
@@ -42,7 +43,7 @@
             justify-content: space-between;
         }
 
-        /* LADO ESQUERDO (PERFEITO CONFORME FEEDBACK) */
+        /* LADO ESQUERDO */
         .left-side {
             display: flex;
             flex-direction: column;
@@ -88,28 +89,30 @@
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* LADO DIREITO (ESTÉTICA RENOVADA) */
+        /* LADO DIREITO */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Mantém o título no centro da imagem */
-            padding-top: 80px; 
+            padding-top: 60px; /* Ajustado para acomodar o texto maior */
         }
 
-        /* NOVA IDEIA: Título Neon sem fundo sólido */
+        /* TÍTULO REPOSITORIES COM NOVA FONTE E TAMANHO */
         .section-header {
+            font-family: 'Orbitron', sans-serif; /* Fonte solicitada */
             color: black;
-            font-size: 2.5em;
+            font-size: 3.8em; /* Tamanho aumentado */
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
             /* Brilho Neon Laranja */
-            text-shadow: 0 0 10px #ff8c00, 
-                         0 0 20px #ff8c00, 
-                         0 0 40px #ff8c00;
-            margin-bottom: 125px; /* Espaço para alinhar Masters com a Presentation Box */
+            text-shadow: 0 0 15px #ff8c00, 
+                         0 0 30px #ff8c00, 
+                         0 0 50px #ff8c00;
+            
+            /* Ajuste de margem para manter o alinhamento do botão Masters com a Presentation Box */
+            margin-bottom: 110px; 
             text-align: center;
         }
 
@@ -142,18 +145,18 @@
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>O currículo técnico MJLS foi estruturado de forma modular para guiar seu aprendizado prático através das Classes 1 a 5.</p>
+                <p>Bem-vindo à Masterclass MJLS. Explore o conteúdo técnico e prático desenvolvido através das Classes 1, 2, 3, 4 e 5 acessando o repositório ao lado [1].</p>
             </div>
         </div>
 
-        <!-- LADO DIREITO REESTILIZADO -->
+        <!-- LADO DIREITO -->
         <div class="right-side">
-            <!-- Título estilizado como letreiro neon -->
+            <!-- Título "Repositories:" com fonte Orbitron e tamanho ampliado -->
             <div class="section-header">
-                MODULES: 01-05
+                Repositories:
             </div>
             
-            <!-- BotãoMasters alinhado com o topo da caixa da esquerda -->
+            <!-- Botão Masters alinhado com o topo da caixa da esquerda -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
