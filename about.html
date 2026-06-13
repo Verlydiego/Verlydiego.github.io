@@ -13,7 +13,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-color: #000000;
-            
             margin: 0;
             display: flex;
             justify-content: center;
@@ -23,8 +22,6 @@
             font-family: 'Montserrat', sans-serif;
             color: white;
             position: relative;
-            
-            /* ESPAÇAMENTO CONTROLADO: 10px nas laterais para encostar quase totalmente */
             padding: 40px 10px; 
         }
 
@@ -42,14 +39,14 @@
             max-width: 1400px; 
             gap: 20px;
             align-items: flex-start;
-            justify-content: space-between; /* Empurra as colunas para as extremidades */
+            justify-content: space-between;
         }
 
-        /* COLUNA ESQUERDA: Colada na borda */
+        /* COLUNA ESQUERDA: Agora com alinhamento centralizado para a imagem e caixa */
         .left-side {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center; /* Garante a imagem no centro da largura da caixa */
             padding: 0;
             margin: 0;
         }
@@ -60,8 +57,6 @@
             border-radius: 50%;
             line-height: 0;
             margin-bottom: 20px;
-            /* Pequeno recuo para a foto não ficar "cortada" visualmente na borda */
-            margin-left: 20px; 
         }
 
         .profile-img {
@@ -73,21 +68,20 @@
             box-shadow: 0 0 20px #00e5ff;
         }
 
-        /* CAIXA DE APRESENTAÇÃO: Largura reduzida e colada à esquerda */
+        /* CAIXA DE APRESENTAÇÃO: Bordas arredondadas e largura ajustada */
         .presentation-box {
             background-color: #ff8c00; 
             color: black;              
             padding: 40px 30px;
+            min-height: 350px;       
+            width: 320px;            
             
-            /* AJUSTES SOLICITADOS */
-            min-height: 350px;       /* Mantida a altura que ficou boa */
-            width: 320px;            /* Largura reduzida significativamente */
-            margin-left: 0;          /* Encosta na borda definida pelo body */
+            /* Bordas arredondadas em todos os lados para não ficar quadrada à esquerda */
+            border-radius: 20px; 
             
-            border-radius: 0 20px 20px 0; /* Arredondamento apenas no lado direito */
             font-weight: bold;
             font-size: 1.1em;
-            text-align: left;
+            text-align: center; /* Texto centralizado para harmonizar com o layout */
             display: flex;
             align-items: center;
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
@@ -99,7 +93,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 150px; /* Desce a seção Repositories conforme solicitado */
+            
+            /* ALINHAMENTO: "Repositories" na linha do centro da imagem (200px imagem / 2 = 100px) */
+            padding-top: 80px; 
         }
 
         .working-box {
@@ -110,7 +106,10 @@
             font-size: 1.1em;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 80px; 
+            
+            /* Espaçamento para o botão Masters abaixo */
+            margin-bottom: 120px; 
+            
             box-shadow: 0 0 15px #00e5ff; 
         }
 
@@ -135,7 +134,7 @@
 <body>
 
     <div class="main-container">
-        <!-- LADO ESQUERDO: REDUZIDO E POSICIONADO À BORDA -->
+        <!-- LADO ESQUERDO: IMAGEM NO CENTRO DA CAIXA -->
         <div class="left-side">
             <a href="index.html" class="profile-link">
                 <img src="images/62560979.png" alt="Home" class="profile-img">
@@ -145,7 +144,7 @@
             </div>
         </div>
 
-        <!-- LADO DIREITO: REPOSITORIES REPOSICIONADO -->
+        <!-- LADO DIREITO: REPOSITORIES ALINHADO AO CENTRO DA IMAGEM -->
         <div class="right-side">
             <div class="working-box">
                 Repositories:
