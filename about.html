@@ -42,12 +42,11 @@
             justify-content: space-between;
         }
 
+        /* LADO ESQUERDO (PERFEITO CONFORME FEEDBACK) */
         .left-side {
             display: flex;
             flex-direction: column;
             align-items: center; 
-            padding: 0;
-            margin: 0;
         }
 
         .profile-link {
@@ -89,75 +88,72 @@
             box-shadow: 0 0 25px #00e5ff, 0 0 50px #00e5ff;
         }
 
-        /* COLUNA DIREITA */
+        /* LADO DIREITO (ESTÉTICA RENOVADA) */
         .right-side {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Alinhamento de Repositories com o centro da imagem (80px do topo) */
+            /* Mantém o título no centro da imagem */
             padding-top: 80px; 
         }
 
-        /* 1. CAIXA REPOSITORIES: LARGURA E ALTURA AUMENTADAS */
-        .working-box {
-            background-color: #ff8c00; 
-            color: black;              
-            padding: 20px 10px;      /* Altura levemente aumentada */
-            width: 550px;            /* Largura aumentada significativamente */
-            border-radius: 8px;
-            font-size: 1.2em;
+        /* NOVA IDEIA: Título Neon sem fundo sólido */
+        .section-header {
+            color: black;
+            font-size: 2.5em;
             font-weight: 900;
             text-transform: uppercase;
+            letter-spacing: 5px;
+            /* Brilho Neon Laranja */
+            text-shadow: 0 0 10px #ff8c00, 
+                         0 0 20px #ff8c00, 
+                         0 0 40px #ff8c00;
+            margin-bottom: 125px; /* Espaço para alinhar Masters com a Presentation Box */
             text-align: center;
-            
-            /* 2. ESPAÇAMENTO CALCULADO: 
-               Para que o topo do botão Masters alinhe com o topo da Presentation Box 
-               A Presentation box começa aos ~308px do topo (80px + 208px imagem + 20px margin). 
-            */
-            margin-bottom: 128px; 
-            
-            box-shadow: 0 0 15px #00e5ff; 
         }
 
         .masters-button {
             display: inline-block;
-            padding: 20px 50px;
+            padding: 20px 60px;
             background-color: #ff8c00;
             color: black;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 15px;
             font-weight: 900;
-            font-size: 1.5em;
+            font-size: 1.6em;
+            text-transform: uppercase;
             transition: 0.4s;
             box-shadow: 0 0 15px #00e5ff;
         }
 
         .masters-button:hover {
             transform: scale(1.1);
+            box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
         }
     </style>
 </head>
 <body>
 
     <div class="main-container">
-        <!-- COLUNA ESQUERDA -->
+        <!-- LADO ESQUERDO -->
         <div class="left-side">
             <a href="index.html" class="profile-link">
                 <img src="images/62560979.png" alt="Home" class="profile-img">
             </a>
             <div class="presentation-box">
-                <p>Nesta seção, exploramos o currículo técnico MJLS. Acesse os módulos das Classes 1 a 5 através do nosso repositório principal.</p>
+                <p>O currículo técnico MJLS foi estruturado de forma modular para guiar seu aprendizado prático através das Classes 1 a 5.</p>
             </div>
         </div>
 
-        <!-- COLUNA DIREITA -->
+        <!-- LADO DIREITO REESTILIZADO -->
         <div class="right-side">
-            <!-- CAIXA LARGA E ALTA -->
-            <div class="working-box">
-                Repositories:
+            <!-- Título estilizado como letreiro neon -->
+            <div class="section-header">
+                MODULES: 01-05
             </div>
-            <!-- BOTÃO ALINHADO COM O TOPO DA CAIXA DA ESQUERDA -->
+            
+            <!-- BotãoMasters alinhado com o topo da caixa da esquerda -->
             <a href="https://verlydiego.github.io/Masters/" class="masters-button">
                 Masters
             </a>
